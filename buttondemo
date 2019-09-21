@@ -1,0 +1,59 @@
+import React, { Component } from 'react';
+import { Alert, Text, View, StyleSheet, Button } from 'react-native';
+
+export default class HelloWorldApp extends Component {
+
+//Declare a function
+Myfunction = (ev) => {
+  //code
+    Alert.alert(
+       'My Alert!!!'
+    )
+}
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={styles.box}>
+        <Text style={styles.mytext}>Hello, world!</Text>
+        </View>
+        <Button 
+        title = 'Click Me'
+        backgroundColor = "#bada55"
+        onPress = {
+            //code sini
+            this.Myfunction
+        }
+        />
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create(
+  {
+    container: {
+      flex: 1, 
+      justifyContent: "center", 
+      alignItems: "center",
+    },
+
+    box: {
+      width: 200,
+      height: 200,
+      backgroundColor: 'skyblue',
+      borderWidth: 2,
+      borderRadius: 30,
+      justifyContent: "center", 
+      alignItems: "center",
+    },
+
+    mytext: {
+      fontSize: 30,
+    }
+  }
+)
+
+
+
+
